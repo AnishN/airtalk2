@@ -106,3 +106,17 @@ h1{
 	color: white;
 	font-family: verdana;
 }
+
+#docParagraph{
+	margin-left: 2%;
+	font-size: 200%;
+	color: white;
+	font-family: verdana;
+}
+
+.docText{
+	margin-left: 2%;
+	font-size: 125%;
+	color: white;
+	font-family: verdana;
+}

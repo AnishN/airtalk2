@@ -30,12 +30,17 @@ body{
 	margin: 0px auto;
 }
 
-img{
+#paperImage{
 	position: absolute;
 	height: 20%;
 	width: 20%;
 	margin-top: 20px;
 	margin-left: 40%;
+}
+
+#headerImg{
+	margin-top: 2px;
+	position: absolute;	
 }
 
 #loginTable p{

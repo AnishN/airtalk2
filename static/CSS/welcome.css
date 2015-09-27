@@ -14,7 +14,7 @@ body{
 }
 
 #welcomeSlogan{
-	margin-top: 30%;
+	margin-top: 27%;
 	margin-left: 2%;
 	
 	font-size: 300%;
@@ -22,10 +22,15 @@ body{
 	font-family: verdana;
 }
 
+img{
+	margin-top: 2px;
+	position: absolute;	
+}
+
 .myButton {
 	margin-left: 50%;
 	margin-right: 50%;
-	margin-top: 2%;
+	margin-top: 1%;
 	background-color: transparent;
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
@@ -35,8 +40,11 @@ body{
 	cursor:pointer;
 	color: white;
 	font-family:Arial;
-	font-size:20px;
-	padding:16px 31px;
+	font-size:25px;
+	padding-left: 35px;
+	padding-right: 35px;
+	padding-top: 16px;
+	padding-bottom: 16px;
 	text-decoration:none;
 	 -webkit-transition: 1s; /* Safari */
     transition: 1s;

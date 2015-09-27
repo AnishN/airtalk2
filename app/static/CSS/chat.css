@@ -12,6 +12,11 @@ body{
 	margin: 0px;
 }
 
+img{
+	margin-top: 2px;
+	position: absolute;	
+}
+
 #headerBar{
 	padding-bottom: 55px;
 	background-color: #282828;
@@ -19,14 +24,69 @@ body{
 	margin-bottom: 1%;
 }
 
-#chatRoom{
-	margin: 0px auto;
-	margin-top: 4%;
+h1{
+	text-align: center;
+	font-family: verdana;
+	
+	color: white;
+}
+
+#chat{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	width: 550px;
 	height: 70%;
 	background: rgba(0,0,0,0.1);
+	font-size: 2em;
+	font-color: white;
+	
+	box-shadow: 0px 0px 5px black;
+	border: 0px;
 }
 
+#text{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 550px;
+	font-family: verdana;
+}
+
+#leaveLink{
+	display: block;
+	text-align: center;
+	font-family: verdana;
+}
+
+.myButton {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:1px solid white;
+	cursor:pointer;
+	color: gray;
+	display: inline-block;
+	font-family:Arial;
+	font-size:20px;
+	padding:16px 31px;
+	text-decoration:none;
+	transition: 1s;
+}
+
+.myButton:hover {
+	background-color:transparent;
+	color: white;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/*
 #chatRoom #message{
 	position: relative;
 	margin-left: 2%;
@@ -60,3 +120,4 @@ body{
 	float: right;
 	margin-right: 2%;
 }
+*/

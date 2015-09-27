@@ -1,6 +1,7 @@
 <html>
     <head>
-        <title>Flask-SocketIO-Chat: {{ room }}</title>
+        <title>Flight Chat: {{ room }}</title>
+		<link rel="stylesheet" href="../static/CSS/chat.css" />
         <script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
         <script type="text/javascript" charset="utf-8">
@@ -30,9 +31,10 @@
         </script>
     </head>
     <body>
-        <h1>Flask-SocketIO-Chat: {{ room }}</h1>
-        <textarea id="chat" cols="80" rows="20"></textarea><br><br>
-        <input id="text" size="80" placeholder="Enter your message here"><br><br>
-        <a href="{{ url_for('main.index') }}" onclick="socket.emit('left', {});">Leave this room</a>
+		<div id="headerBar"><img src="../static/img/small-horizontal-cropped.png"></div>
+        <h1>Flight Chat: {{ room }}</h1>
+        <textarea id="chat" cols="80" rows="20" disabled="disabled"></textarea><br>
+        <input id="text" size="80" placeholder="Enter your message here"><br>
+        <button class="myButton" id="leaveLink" href="{{ url_for('main.index') }}" onclick="socket.emit('left', {});">Leave this room</button>
     </body>
 </html>

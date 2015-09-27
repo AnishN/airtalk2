@@ -39,7 +39,10 @@ def login():
         session['email'] = form.email.data
         session['flightid'] = form.flightid.data
         name = checkEmailAndFlight(session['email'], session['flightid'])
-        session['name'] = str(name[0])
+        if(len(name) != 0):
+          session['name'] = str(name[0])
+        else:
+          session['name'] = ""
         return redirect(url_for('.chat'))
     elif request.method == 'GET':
         form.email.data = session.get('email', '')
@@ -64,7 +67,16 @@ def chat():
     email = session.get('email', '')
     name = session.get('name', '')
     flightid = session.get('flightid', '')
-    if email == '' or name == "" or flightid == '':
+    if email == '' or name == '' or flightid == '':
         return redirect(url_for('.index'))
     return render_template('chat.html', name=name, room=flightid)
     
+@main.route('/about/')
+def about():
+    """About page for the application."""
+    return render_template('about.html')
+
+@main.route('/documentation/')
+def docs():
+    """Documentation page for application."""
+    return render_template('documentation.html')

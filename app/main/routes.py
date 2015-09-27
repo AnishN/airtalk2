@@ -11,7 +11,7 @@ db = None
 host = None
 
 try:
-    parser.read("/var/www/airtalk/config.ini")
+    parser.read("/var/www/airtalk2/config.ini")
     user = parser.get('database', 'username')
     password = parser.get('database', 'password')
     db = parser.get('database', 'name')

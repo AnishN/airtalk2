@@ -1,9 +1,30 @@
-from flask import session, redirect, url_for, render_template, request
+from flask import session, redirect, url_for, render_template, request, jsonify
+from ConfigParser import SafeConfigParser
 from . import main
 from .forms import LoginForm
+import MySQLdb
 
+parser = SafeConfigParser()
+user = None
+password = None
+db = None
+host = None
 
-@main.route('/', methods=['GET', 'POST'])
+try:
+    parser.read("/var/www/airtalk/config.ini")
+    user = parser.get('database', 'username')
+    password = parser.get('database', 'password')
+    db = parser.get('database', 'name')
+    host = parser.get('database', 'host')
+
+except:
+    print "ERROR WITH DATABASE CALL"
+
+@main.route("/")
+def hello1():
+    return render_template("index.html")
+
+@main.route('/login', methods=['GET', 'POST'])
 def index():
     """"Login form to enter a room."""
     form = LoginForm()
@@ -14,7 +35,7 @@ def index():
     elif request.method == 'GET':
         form.name.data = session.get('name', '')
         form.room.data = session.get('room', '')
-    return render_template('index.html', form=form)
+    return render_template('login.html', form=form)
 
 
 @main.route('/chat')

@@ -2,9 +2,13 @@
 <html>
     <head>
         <title>Flask-SocketIO-Chat</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="/static/CSS/login.css" />
+        <script src="/static/JS/loginJS.js"></script>
     </head>
     <body>
-        <h1>Flask-SocketIO-Chat</h1>
+        <div id="headerBar"><a href="index.html"><img id="headerImg" src="../static/img/small-horizontal-cropped.png"></a></div>
+    <img src="{{ url_for('static', filename='img/white_airplane.png') }}" id = "paperImage" "height="20%" width="20%" style="display:block;" margin-top="20px;"/>
         <form method="POST">
             {{ form.hidden_tag() }}
             {{ form.email.label }}: {{ form.email() }} {% for error in form.email.errors %}{{ error }}{% endfor %}<br>

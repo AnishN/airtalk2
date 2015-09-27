@@ -39,10 +39,11 @@ def login():
         session['email'] = form.email.data
         session['flightid'] = form.flightid.data
         name = checkEmailAndFlight(session['email'], session['flightid'])
+        print name
         if(len(name) != 0):
-          session['name'] = str(name[0])
+        	session['name'] = name#str(name[0])
         else:
-          session['name'] = ""
+        	session['name'] = ""
         return redirect(url_for('.chat'))
     elif request.method == 'GET':
         form.email.data = session.get('email', '')
@@ -57,7 +58,7 @@ def checkEmailAndFlight(email, flightId):
     row = r.fetch_row()
     print row
     if len(row) != 0:
-    	return row[0]
+    	return str(row[0][0])
     return ""
 
 @main.route('/chat/')

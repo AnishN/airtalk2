@@ -20,12 +20,12 @@ try:
 except:
     print "ERROR WITH DATABASE CALL"
 
-@main.route("/")
-def hello1():
-    return render_template("index.html")
+@main.route('/')
+def index():
+    return render_template('index.html')
 
 @main.route('/login', methods=['GET', 'POST'])
-def index():
+def login():
     """"Login form to enter a room."""
     form = LoginForm()
     if form.validate_on_submit():

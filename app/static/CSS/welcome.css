@@ -13,6 +13,15 @@ body{
 	opacity: .4;
 }
 
+.right {
+    text-align: right;
+    float: right;
+}
+
+#headerImg{
+	margin-right: 0px;
+}
+
 #welcomeSlogan{
 	margin-top: 20%;
 	margin-left: 2%;
@@ -22,6 +31,7 @@ body{
 	font-family: verdana;
 }
 
+<<<<<<< HEAD
 h1 {
   margin-left: 2%;
   font-size: 300%;
@@ -33,6 +43,14 @@ p {
   font-size: 100%;
   color: white;
   font-family: verdana;
+}
+
+a
+{
+	text-decoration:none;
+	color: white;
+	font-weight: bold;
+	font-family:Verdana;
 }
 
 img{

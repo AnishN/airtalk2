@@ -1,0 +1,51 @@
+body{
+	background: url("https://notalentforcertainty.files.wordpress.com/2014/04/photo_13197448_62911_30936624_main1.jpg") no-repeat center center fixed; 
+	background-size: cover;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+#headerBar{
+	padding-bottom: 55px;
+	background-color: #282828;
+	opacity: .4;
+}
+
+#welcomeSlogan{
+	margin-top: 30%;
+	margin-left: 2%;
+	
+	font-size: 300%;
+	color: white;
+	font-family: verdana;
+}
+
+.myButton {
+	margin-left: 50%;
+	margin-right: 50%;
+	margin-top: 2%;
+	background-color: transparent;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border: 2px solid white;
+	display:inline-block;
+	cursor:pointer;
+	color: white;
+	font-family:Arial;
+	font-size:20px;
+	padding:16px 31px;
+	text-decoration:none;
+	 -webkit-transition: 1s; /* Safari */
+    transition: 1s;
+}
+.myButton:hover {
+	background-color:white;
+	color: orange;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

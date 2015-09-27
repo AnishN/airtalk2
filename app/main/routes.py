@@ -1,30 +1,8 @@
-from flask import session, redirect, url_for, render_template, request, jsonify
-from ConfigParser import SafeConfigParser
+from flask import session, redirect, url_for, render_template, request
 from . import main
 from .forms import LoginForm
-import MySQLdb
 
-parser = SafeConfigParser()
-user = None
-password = None
-db = None
-host = None
-
-try:
-    parser.read("/var/www/airtalk2/config.ini")
-    user = parser.get('database', 'username')
-    password = parser.get('database', 'password')
-    db = parser.get('database', 'name')
-    host = parser.get('database', 'host')
-
-except:
-    print "ERROR WITH DATABASE CALL"
-
-@main.route('/')
-def index():
-    return render_template('index.html')
-
-@main.route('/login', methods=['GET', 'POST'])
+@main.route('/', methods=['GET', 'POST'])
 def login():
     """"Login form to enter a room."""
     form = LoginForm()

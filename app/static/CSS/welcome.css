@@ -22,6 +22,19 @@ body{
 	font-family: verdana;
 }
 
+h1 {
+  margin-left: 2%;
+  font-size: 300%;
+  color: white;
+  font-family: verdana;
+}
+
+p {
+  font-size: 100%;
+  color: white;
+  font-family: verdana;
+}
+
 img{
 	margin-top: 2px;
 	position: absolute;	

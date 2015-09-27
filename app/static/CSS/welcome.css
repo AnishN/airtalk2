@@ -92,3 +92,17 @@ img{
 #go-left {
   float: left;
 }
+
+#aboutSlogan{
+	margin-left: 2%;
+	font-size: 150%;
+	color: white;
+	font-family: verdana;
+}
+
+h1{
+	margin-left: 2%;
+	font-size: 250%;
+	color: white;
+	font-family: verdana;
+}

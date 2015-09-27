@@ -1,14 +1,14 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Flask-SocketIO-Chat</title>
-    </head>
-    <body>
-        <h1>Flask-SocketIO-Chat</h1>
-        <form method="POST">
-            {{ form.hidden_tag() }}
-            {{ form.name.label }}: {{ form.name() }} {% for error in form.name.errors %}{{ error }}{% endfor %}<br>
-            {{ form.room.label }}: {{ form.room() }} {% for error in form.room.errors %}{{ error }}{% endfor %}<br>
-            {{ form.submit() }}
-        </form>
-    </body>
+<head>
+	<link rel="stylesheet" href="static/CSS/welcome.css" />
+</head>
+<body>
+	<div id="headerBar"></div>
+		<p id="welcomeSlogan">First, your flight was perfect. <br> Now your wait is too.</p>
+	
+	<div id=submitButtonDiv>
+		<a href="login" class="myButton">Login</a>
+	</div>
+</body>
 </html>

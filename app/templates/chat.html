@@ -35,6 +35,6 @@
         <h1>Flight Chat: {{ room }}</h1> <!-- -->
         <textarea id="chat" cols="80" rows="20" disabled="disabled"></textarea><br>
         <input id="text" size="80" placeholder="Enter your message here"><br>
-        <button class="myButton" id="leaveLink" href="{{ url_for('main.index') }}" onclick="socket.emit('left', {});">Leave this room</button>
+        <a class="myButton" id="leaveLink" href="{{ url_for('main.index') }}" onclick="socket.emit('left', {});">Leave this room</a>
     </body>
 </html>

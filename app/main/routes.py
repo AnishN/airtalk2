@@ -39,7 +39,7 @@ def login():
         session['email'] = form.email.data
         session['flightid'] = form.flightid.data
         name = checkEmailAndFlight(session['email'], session['flightid'])
-        session['name'] = name
+        session['name'] = str(name[0])
         return redirect(url_for('.chat'))
     elif request.method == 'GET':
         form.email.data = session.get('email', '')
@@ -51,9 +51,11 @@ def checkEmailAndFlight(email, flightId):
     #database = MySQLdb.connect(host, user, password, db)
     database.query("SELECT fname FROM flightdata WHERE email='{0}' AND flight_id='{1}'".format(email, flightId))
     r = database.store_result()
-    data = r.fetch_row()[0]
-    print data[0]
-    return data[0]
+    row = r.fetch_row()
+    print row
+    if len(row) != 0:
+    	return row[0]
+    return ""
 
 @main.route('/chat/')
 def chat():

@@ -13,7 +13,7 @@ body{
 	opacity: .4;
 }
 
-#tableDiv{
+/*#tableDiv{
 	width: 25%;
 	margin: 0px auto;
 	margin-top: 15%;
@@ -28,7 +28,7 @@ body{
 
 #loginTable{
 	margin: 0px auto;
-}
+}*/
 
 #paperImage{
 	position: absolute;
@@ -43,7 +43,7 @@ body{
 	position: absolute;	
 }
 
-#loginTable p{
+/*#loginTable p{
 	font-family: verdana;
 	font-size: 125%;
 	float: right;
@@ -65,11 +65,21 @@ body{
 	width: 100%;
 	font-family: verdana;
 	font-size: 125%;
+}*/
+
+#loginBox{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15%;
+	display: block;
+	width: 25%;
+	font-family: verdana;
+	color: black;
 }
 
-.myButton {
-	margin-left: 46%;
-	margin-top: 8%;
+input[type="submit"]{
+	margin-left: 10%;
+	margin-top: auto;
 	background-color: white;
 	-moz-border-radius:28px;
 	-webkit-border-radius:28px;
@@ -83,13 +93,14 @@ body{
 	padding:16px 31px;
 	text-decoration:none;
 	transition: 1s;
+	font-family: verdana;
 }
 
-.myButton:hover {
+input[type="submit"]:hover {
 	background-color:transparent;
 	color: white;
 }
-.myButton:active {
+input[type="submit"]:active {
 	position:relative;
 	top:1px;
 }

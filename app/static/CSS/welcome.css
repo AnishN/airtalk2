@@ -57,3 +57,7 @@ img{
 	position:relative;
 	top:1px;
 }
+
+#go-left {
+  float: left;
+}
